@@ -1,0 +1,358 @@
+@a : 295px;  // 椭圆x轴半径(长半径)
+@b : 59px;  // 椭圆y轴半径(短半径)
+@a1 : 170px;  // 椭圆x轴半径(长半径)
+@b1 : 51px;  // 椭圆y轴半径(短半径)
+@a2 : 256px;  // 椭圆x轴半径(长半径)
+@b2 : 88px;  // 椭圆y轴半径(短半径)
+@s : 40;  // 坐标点的数目(数目越大，动画越精细)
+img{width:100%;display: block;}
+html,body{
+  width: 100%;
+  height: 100%;
+  background:#001338;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main{
+    width:1200px;
+    margin:auto;
+    position: relative;
+    .container {
+				width: 100%;
+        position: relative;
+        .ellips{
+            width:@a*2;
+            height:@b*2;
+            border-radius: 100%;
+            position: absolute;
+            left:600px - @a;
+            top:113px;
+            .dot{
+                width: 76px;
+                height: 88px;
+                left: @a - 38px;
+                top: @b - 44px;
+                position: absolute;
+                cursor: pointer;
+                .huan{
+                  position: relative;
+                  width: 56px;
+                  margin:auto;
+                  margin-top: 20px;
+                  .picContent{
+                    width: 36px;
+                    height: 36px;
+                    position: absolute;
+                    left:0;
+                    right:0;
+                    top:0;
+                    bottom:0;
+                    margin: auto;
+                  }
+                }
+                p{
+                  margin-top: 10px;
+                  color:#fff;
+                  text-align: center;
+                }
+                // &:hover{
+                //   -webkit-animation-play-state:paused;
+                // }
+                &.dot1{
+                   animation: move1 20s linear infinite;
+                }
+                &.dot2{
+                  animation: move2 20s linear infinite;
+                }
+                &.dot3{
+                  animation: move3 20s linear infinite;
+                }
+                &.dot4{
+                  animation: move4 20s linear infinite;
+                }
+                &.dot5{
+                  animation: move5 20s linear infinite;
+                }
+                &.dot6{
+                  animation: move6 20s linear infinite;
+                }
+                &.dot7{
+                  animation: move7 20s linear infinite;
+                }
+                &.dot8{
+                  animation: move8 20s linear infinite;
+                }
+                &.dot9{
+                  animation: move9 20s linear infinite;
+                }
+                
+            }
+        }
+        .title{
+           position: absolute;
+           top:370px;
+           width:100%;
+           color:#fff;
+           text-align: center
+        }
+        .title1{
+           position: absolute;
+           top:0px;
+           width:100%;
+           color:#fff;
+           text-align: center;
+           font-size:26px;
+		   cursor: pointer;
+        }
+        .subTitle{
+           position: absolute;
+           top:450px;
+           width:100%;
+           color:#fff;
+           text-align: center
+        }
+        .list{
+           position: absolute;
+           left:0;
+           right:0;
+           top:487px;
+           width:250px;
+           color:#fff;
+           margin:auto;
+           height:40px;
+           z-index: 100;
+           div{
+             width:20%;
+              height:30px;
+             margin-top:5px;
+             box-sizing: border-box;
+             line-height: 30px;
+             float:left;
+             text-align: center;
+            //  background:rgba(0,0,0,0.8);
+              border-right: 1px solid #fff;
+              cursor:pointer;
+             &.item1{
+               transform: skew(0deg, 17deg) translateY(-12px);
+             }
+             &.item2{
+               transform: skew(0deg, 7deg) translateY(-2px);
+             }
+             &.item3{
+               transform: skew(0deg, -1deg) translateY(1px);
+             }
+             &.item4{
+               transform: skew(0deg, -7deg) translateY(-3px);
+             }
+             &.item5{
+               transform: skew(0deg, -20deg) translateY(-13px);
+               border:none;
+             }
+           }
+        }
+        .ellips1{
+            width: @a1*2 ;
+            height: @b1*2;
+            border-radius: 100%;
+            position: absolute;
+            left:600px - @a1;
+            top:451px;
+            z-index: 3;
+            .dot{
+                width: 76px;
+                height: 88px;
+                left: @a1 - 38px;
+                top: @b1 - 44px;
+                position: absolute;
+                cursor: pointer;
+                .huan{
+                  position: relative;
+                  width: 56px;
+                  margin:auto;
+                  margin-top: 20px;
+                  .picContent{
+                    width: 36px;
+                    height: 36px;
+                    position: absolute;
+                    left:0;
+                    right:0;
+                    top:0;
+                    bottom:0;
+                    margin: auto;
+                  }
+                }
+                p{
+                  margin-top: 10px;
+                  color:#fff;
+                  text-align: center;
+                }
+                &.dot1{
+                   animation: move11 20s linear infinite;
+                }
+                &.dot2{
+                  animation: move22 20s linear infinite;
+                }
+                &.dot3{
+                  animation: move33 20s linear infinite;
+                }
+                &.dot4{
+                  animation: move44 20s linear infinite;
+                }
+                &.dot5{
+                  animation: move55 20s linear infinite;
+                }
+                &.dot6{
+                  animation: move66 20s linear infinite;
+                }
+                
+            }
+        }
+        .ellips2{
+            width: @a2*2 ;
+            height: @b2*2;
+            border-radius: 100%;
+            position: absolute;
+            left:600px - @a2;
+            top:452px;
+            z-index: 3;
+            .dot{
+                width: 76px;
+                height: 88px;
+                left: @a2 - 38px;
+                top: @b2 - 44px;
+                position: absolute;
+                cursor: pointer;
+                .huan{
+                  position: relative;
+                  width: 56px;
+                  margin:auto;
+                  margin-top: 20px;
+                  .picContent{
+                    width: 36px;
+                    height: 36px;
+                    position: absolute;
+                    left:0;
+                    right:0;
+                    top:0;
+                    bottom:0;
+                    margin: auto;
+                  }
+                }
+                p{
+                  margin-top: 10px;
+                  color:#fff;
+                  text-align: center;
+                }
+                &.dot1{
+                   animation: move10 20s linear infinite;
+                }
+                &.dot2{
+                  animation: move20 20s linear infinite;
+                }
+                &.dot3{
+                  animation: move30 20s linear infinite;
+                }
+                &.dot4{
+                  animation: move40 20s linear infinite;
+                }
+                &.dot5{
+                  animation: move50 20s linear infinite;
+                }
+                &.dot6{
+                  animation: move60 20s linear infinite;
+                }
+                &.dot7{
+                  animation: move70 20s linear infinite;
+                }
+                
+            }
+        }
+			}
+}
+
+@keyframes move1{
+    .loop(0,0deg);
+}
+@keyframes move2{
+    .loop(0,40deg);
+}
+@keyframes move3{
+    .loop(0,80deg);
+}
+@keyframes move4{
+    .loop(0,120deg);
+}
+@keyframes move5{
+    .loop(0,160deg);
+}
+@keyframes move6{
+    .loop(0,200deg);
+}
+@keyframes move7{
+    .loop(0,240deg);
+}
+@keyframes move8{
+    .loop(0,280deg);
+}
+@keyframes move9{
+    .loop(0,3200deg);
+}
+
+@keyframes move11{
+    .loop1(0,0deg);
+}
+@keyframes move22{
+    .loop1(0,60deg);
+}
+@keyframes move33{
+    .loop1(0,120deg);
+}
+@keyframes move44{
+    .loop1(0,180deg);
+}
+@keyframes move55{
+    .loop1(0,240deg);
+}
+@keyframes move66{
+    .loop1(0,300deg);
+}
+
+@keyframes move10{
+    .loop2(0,0deg);
+}
+@keyframes move20{
+    .loop2(0,51deg);
+}
+@keyframes move30{
+    .loop2(0,102deg);
+}
+@keyframes move40{
+    .loop2(0,153deg);
+}
+@keyframes move50{
+    .loop2(0,204deg);
+}
+@keyframes move60{
+    .loop2(0,255deg);
+}
+@keyframes move70{
+    .loop2(0,306deg);
+}
+
+.loop(@index,@deg) when (@index < @s+1) {
+    .loop((@index + 1),@deg);
+    @keyframeSel: @index * 100%/@s;
+    @{keyframeSel}{ transform: translate(@a*cos(360deg/@s*@index+@deg),@b*sin(360deg/@s*@index+@deg),);}
+}
+.loop1(@index,@deg) when (@index < @s+1) {
+    .loop1((@index + 1),@deg);
+    @keyframeSel: @index * 100%/@s;
+    @{keyframeSel}{ transform: translate(@a1*cos(360deg/@s*@index+@deg),@b1*sin(360deg/@s*@index+@deg),);}
+}
+.loop2(@index,@deg) when (@index < @s+1) {
+    .loop2((@index + 1),@deg);
+    @keyframeSel: @index * 100%/@s;
+    @{keyframeSel}{ transform: translate(@a2*cos(360deg/@s*@index+@deg),@b2*sin(360deg/@s*@index+@deg),);}
+}
+

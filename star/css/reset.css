@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 重写浏览器的所有默认样式
+---------------------------------------------------------------------------------------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,th,td,p {
+padding: 0;
+margin: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+fieldset,img {
+border: 0;
+}
+address,caption,cite,code,dfn,em,th,var,strong {
+font-weight: normal;
+font-style: normal;
+}
+ol,ul {
+list-style:none;
+}
+caption,th {
+text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+font-weight: normal;
+font-size: 100%;
+}
+q:before,q:after {
+content:'';
+}
+abbr,acronym {
+border: 0;
+}
+
+/*基本属性
+---------------------------------------------------------------------------------------------------------------------- */
+body{
+    text-align:left;
+    font-family:Heiti, “黑体”, Helvetica, Tahoma, Arial, STXihei, “华文细黑”, SimSun, “宋体”, sans-serif;
+}
+a{text-decoration: none; 
+    font-family:Heiti, “黑体”, Helvetica, Tahoma, Arial, STXihei, “华文细黑”, SimSun, “宋体”, sans-serif;
+}
+a:link,a:visited{ color: inherit;}
+a:hover,a:active,a:focus{color:inherit;text-decoration: none; cursor:pointer;}
+/* 清除浮动
+---------------------------------------------------------- */
+.cl:after{content:".";display:block;height:0;clear:both;visibility:hidden;}.cl{zoom:1;}
+/*下面的清除浮动，相同与  clear_box，只用与，具体项目中，*/
+.bk,.bk10{font:0px/0px sans-serif;clear:both;display:block;overflow:hidden;height:0;line-height:0px;border:0px;padding:0px;margin:0px;}
+.bk10{height:10px;}
+
+/* html,body{width:100%; height:100%;} */
+img{width: 100%;display: block;}
+
+
+

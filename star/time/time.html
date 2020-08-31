@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>倒计时插件</title>
+<style>
+	h3{margin-top: 30px}	
+	.ys1{
+		color: #009AC1;
+		font-weight: bold;
+	}
+	.ys2{
+	color: #2FAB11;
+	font-weight: bold;
+	font-size: 180px;
+	}
+	.ys3{
+	color: #C16000;
+	font-weight: bold;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="container timeBar ys2" data="900"></div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/count.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".timeBar").each(function () {
+			$(this).countdownsync({
+				dayTag: "",
+				hourTag: "<label class='tt hh dib vam'>00</label><span>时</span>",
+				minTag: "<label class='tt mm dib vam'>00</label><span>分</span>",
+				secTag: "<label class='tt ss dib vam'>00</label><span>秒</span>",
+				dayClass: ".dd",
+				hourClass: ".hh",
+				minClass: ".mm",
+				secClass: ".ss",
+				isDefault: false,
+				showTemp:1
+			}, function () {
+				//location.reload();
+			});
+		});
+	});
+	
+</script>
+</body>
+</html>
